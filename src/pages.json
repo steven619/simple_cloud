@@ -1,15 +1,21 @@
 {
   "pages": [
     {
-      "path": "pages/workshop/cargo",
-      "style": {
-        "navigationBarTitleText": "huowu"
-      }
-    },
-    {
       "path": "pages/index/index",
       "style": {
         "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/workshop/cargo",
+      "style": {
+        "navigationBarTitleText": "仓库管理"
+      }
+    },
+    {
+      "path": "pages/dashboard/baobiao",
+      "style": {
+        "navigationBarTitleText": "首页"
       }
     },
     {

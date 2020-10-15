@@ -1,11 +1,10 @@
 <template>
 	<view>
-    <dashboard v-if="PageCur=='dashboard'"></dashboard>
-    <workshop v-if="PageCur=='workshop'"></workshop>
-    <analysis v-if="PageCur=='analysis'"></analysis>
-    <alert v-if="PageCur=='alert'"></alert>
+
+    <bao-biao v-if="PageCur=='baobiao'"></bao-biao>
+    <car-go v-if="PageCur=='cargo'"></car-go>
     <personal-center v-if="PageCur=='personal-center'"></personal-center>
-    
+
     <view class="cu-bar tabbar bg-white shadow foot">
       <view class="action"
             v-for="item in menuList"
@@ -22,16 +21,20 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import { State, Getter, Action, Mutation, namespace } from 'vuex-class'
   import Cloud from '../../utils/cloud'
   import Dashboard from '../dashboard/dashboard.vue'
   import Workshop from "@/pages/workshop/workshop.vue";
   import Analysis from "@/pages/analysis/analysis.vue";
   import Alert from "@/pages/alert/alert.vue";
   import PersonalCenter from "@/pages/personal_center/personal_center.vue";
+
+  import CarGo from "@/pages/workshop/cargo.vue";
+  import BaoBiao from "@/pages/dashboard/baobiao.vue";
   @Component({
     name: 'MpIndex',
     components: {
+      BaoBiao,
+      CarGo,
       PersonalCenter,
       Alert,
       Analysis,
@@ -43,9 +46,8 @@
     private driver = new Cloud()
     private PageCur = ''
     private menuList = [
-      { name: 'dashboard', title:'报表管理'},
-      { name: 'workshop', title:'仓库管理'},
-      // { name: 'analysis', title:'分析'},
+      { name: 'baobiao', title:'首页'},
+      { name: 'cargo', title:'仓库管理'},
       { name: 'personal-center', title:'我的'}
     ]
 
@@ -58,7 +60,7 @@
           title: option.msg
         });
       }else {
-        this.PageCur = 'dashboard'
+        this.PageCur = 'baobiao'
       }
       this.$nextTick()
     }

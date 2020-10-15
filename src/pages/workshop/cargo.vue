@@ -20,8 +20,8 @@
 
       <view class="cu-list grid col-3">
         <view class="cu-item " v-for="(item,index) in cargoprince" :key="index">
-          <text class="lg text-gray " :class="'cuIcon-' + item.name">{{item.value}}</text>
-          <text>{{item.name}}</text>
+          <view class="lg text-black " :class="'cuIcon-' + item.name">{{item.value}}</view>
+          <view class="text-red">{{item.name}}</view>
         </view>
       </view>
 
@@ -66,7 +66,7 @@
     import RadioModal from "@/components/common/radio_modal.vue";
     import CargoCard from "@/components/card/cargo_card.vue";
     @Component({
-        name: 'task',
+        name: 'CarGo',
         components: {
           CargoCard,
           RadioModal,

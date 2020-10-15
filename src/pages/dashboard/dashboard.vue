@@ -17,7 +17,6 @@
         </view>
       </view>
     </scroll-view>
-	<button type="primary">查看当前报表</button>
   </view>
 </template>
 
