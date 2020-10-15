@@ -1,84 +1,71 @@
 <template>
     <view v-if="taskInfo">
       <view class="cu-list menu sm-border">
-        <view class="cu-bar bg-white solid-bottom margin-top-xs">
-          <view class="action">
-            <text class="cuIcon-titles text-green"></text> {{taskInfo.name}}
-          </view>
-
-          <view class="action">
-            <view class="cu-capsule round" @click="$emit('showTaskInfo', taskInfo)">
-              <view class='cu-tag bg-green '>
-                进度dfsfdas
-              </view>
-              <view class="cu-tag line-blue">
-                {{taskInfo.amount_completed}}/{{taskInfo.task_number}}
-              </view>
+        <view class="cu-card case" :class="isCard?'no-card':''">
+          <view class="cu-item shadow">
+            <view class="image">
+<!--              :src=taskInfo.img-->
+              <image src="https://img30.360buyimg.com/sku/jfs/t1/92539/20/17059/248918/5e81dab3Ebd9b8409/b2b655681dd9e633.jpg"
+                     mode="widthFix"></image>
+              <view class="cu-tag bg-blue">充足</view>
             </view>
           </view>
         </view>
+          <view class="cu-bar bg-white solid-bottom margin-top-xs">
 
-        <view class="cu-item" style="margin-top: 1px;">
-          <view class="content">
-            <text class="cuIcon-stop text-brown"></text>
-            <text class="text-grey">工件名称</text>
-          </view>
-          <view class="action">
-            <!--            <text class="text-grey">{{taskInfo.workpiece.name}}</text>-->
-          </view>
-        </view>
-        <view class="cu-item">
-          <view class="content">
-            <text class="cuIcon-all text-green"></text>
-            <text class="text-grey">创建时间</text>
-          </view>
-          <view class="action">
-            <text class="text-grey">{{taskInfo.create_time}}</text>
-          </view>
-        </view>
-      </view>
-      <view class="cu-card case" :class="'no-card'">
-        <view class="cu-item shadow">
-          <view class="image">
-            <image src="taskInfo.img"
-                   mode="widthFix"></image>
-            <view class="cu-tag bg-blue">充足</view>
-          </view>
-          <view class="cu-list menu-avatar">
-            <view class="cu-item">
-              <view class="content flex-sub">
-                <view class="text-grey">{{ taskInfo.name }}</view>
-                <view class="text-gray text-sm flex justify-between">
-                  十天前
-                  <view class="text-gray text-sm">
-                    <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-                    <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-                    <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-                  </view>
+            <view class="action">
+              <text class="cuIcon-titles text-green"></text> {{taskInfo.name}}
+            </view>
+            <view class="action">
+              <view class="cu-capsule round" @click="$emit('showTaskInfo', taskInfo)">
+                <view class='cu-tag bg-green '>
+                  分享
                 </view>
               </view>
             </view>
+        </view>
+        <view class="padding bg-white">
+          <view class="flex  p-xs margin-bottom-sm mb-sm">
+            <view class="flex-twice bg-green padding-sm margin-xs radius">可用库存</view>
+            <view class="flex-twice bg-blue padding-sm margin-xs radius">待入库</view>
+            <view class="flex-twice bg-green padding-sm margin-xs radius">待出库</view>
+            <view class="flex-twice bg-blue padding-sm margin-xs radius">库存量</view>
+          </view>
+          <view class="flex  p-xs margin-bottom-sm mb-sm">
+            <view class="flex-twice bg-green padding-sm margin-xs radius">{{taskInfo.keyongkucun}}</view>
+            <view class="flex-twice bg-blue padding-sm margin-xs radius">{{taskInfo.dairuku}}</view>
+            <view class="flex-twice bg-green padding-sm margin-xs radius">{{taskInfo.daichuku}}</view>
+            <view class="flex-twice bg-blue padding-sm margin-xs radius">{{taskInfo.kucunliang}}</view>
+          </view>
+          <view class="flex  p-xs margin-bottom-sm mb-sm">
+            <view class="flex-twice bg-blue padding-sm margin-xs radius">采购价</view>
+            <view class="flex-twice bg-blue padding-sm margin-xs radius">批发价</view>
+            <view class="flex-twice bg-blue padding-sm margin-xs radius">零售价</view>
+          </view>
+          <view class="flex  p-xs margin-bottom-sm mb-sm">
+            <view class="flex-twice text-price bg-gradual-red padding-sm margin-xs radius">{{taskInfo.caigoujia}}</view>
+            <view class="flex-twice text-price bg-gradual-red padding-sm margin-xs radius">{{taskInfo.pifajia}}</view>
+            <view class="flex-twice text-price bg-gradual-red padding-sm margin-xs radius">{{taskInfo.lingshoujia}}</view>
           </view>
         </view>
       </view>
-
     </view>
 </template>
 
 <script lang="ts">
     import { Component, Vue, Prop } from 'vue-property-decorator'
+    import UploadImage from "@/components/card/upload-img.vue";
     @Component({
         name: 'CargoCard',
         components: {
+          UploadImage
         }
     })
     export default class extends Vue {
         @Prop({required: false, default:()=>{return {}}}) private taskInfo!: object
-
-      created(){
-        console.log(this.taskInfo, 9999)
-      }
     }
+
+
 </script>
 
 <style scoped>

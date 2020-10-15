@@ -2,7 +2,7 @@
     <view>
         <cu-custom bgColor="bg-gradual-green" :isBack="true">
             <block slot="backText">返回</block>
-            <block slot="content">任务列表kkkk</block>
+            <block slot="content">仓库管理</block>
         </cu-custom>
       <view class="cu-bar search bg-white">
         <view class="cu-item">
@@ -11,7 +11,7 @@
         <view class="search-form round">
           <text class="cuIcon-search"></text>
           <input @focus="InputFocus" @blur="InputBlur" :adjust-position="false"
-                 type="text" placeholder="搜索设备" v-model="query.keywords" confirm-type="search"></input>
+                 type="text" placeholder="搜索商品" v-model="query.keywords" confirm-type="search"></input>
         </view>
         <view class="action">
           <button @tap="searchTask" class="cu-btn line-green shadow-blur round">搜索</button>
@@ -19,8 +19,8 @@
       </view>
 
       <view class="cu-list grid col-3">
-        <view class="cu-item" v-for="(item,index) in cargoprince" :key="index">
-          <text class="lg text-gray" :class="'cuIcon-' + item.name">{{item.value}}</text>
+        <view class="cu-item " v-for="(item,index) in cargoprince" :key="index">
+          <text class="lg text-gray " :class="'cuIcon-' + item.name">{{item.value}}</text>
           <text>{{item.name}}</text>
         </view>
       </view>
@@ -75,19 +75,11 @@
     })
     export default class extends Vue {
         private cloud = new Cloud()
-        private taskId:string = ''
         private taskList:any[] = []
-        private taskStateList = [
-            {name: '全部', value: 0},
-            {name: '运行', value: 1},
-            {name: '空闲', value: 2},
-            {name: '离线', value: 3},
-            {name: '告警', value: 4}
-        ]
       private cargoprince: any[] = [
-        {name: '11', value: 'qq'},
-        {name: '22', value: 'ww'},
-        {name: '33', value: 'ee'}
+        {name: '110|700', value: '商品库存'},
+        {name: '$5,665,445', value: '库存成本'},
+        {name: '90', value: '库存预警'}
       ]
         private tabCur:number = 0
         private pullDownBool:boolean = false
@@ -119,7 +111,7 @@
       private showInfo:any = {}
       showTaskInfo(e:any){
         this.showInfo = e
-        this.selectInfoTitle = '工件生产明细'
+        this.selectInfoTitle = '分享成功'
         this.showSelectModal = true
       }
 
