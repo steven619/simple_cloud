@@ -101,7 +101,7 @@
             "disableHostCheck" : true,
             "proxy" : {
                 "/api/v1" : {
-                    "target" : "https://scsb.demo.woody.vip",
+                    "target" : "http://127.0.0.1:9502",
                     "changeOrigin" : true,
                     "secure" : false
                 }

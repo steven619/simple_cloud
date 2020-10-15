@@ -16,7 +16,13 @@ export {
   getOperator as getWorkpiece,
   deleteOperator as deleteWorkpiece
 } from './schedule_management/workpiece'
-
+export {
+  getOperatorList as getCargoList,
+  createOperator as createCargo,
+  updateOperator as updateCargo,
+  getOperator as getCargo,
+  deleteOperator as deleteCargo
+} from './schedule_management/cargo'
 export {
   getOperatorList as getMachineToolList,
   createOperator as createMachineTool,

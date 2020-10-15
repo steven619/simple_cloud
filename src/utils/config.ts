@@ -1,5 +1,5 @@
-const baseURL = 'https://ts-s.demo.woody.vip'
-// const baseURL = 'http://192.168.9.188:9502'
+// const baseURL = 'https://ts-s.demo.woody.vip'
+const baseURL = ''
 const baseWsUrl = baseURL.replace('http','ws')
 const baseDict:any = {
   device_state: [
