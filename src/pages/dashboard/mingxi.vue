@@ -2,7 +2,7 @@
     <view>
         <cu-custom bgColor="bg-gradual-green" :isBack="true">
             <block slot="backText">返回</block>
-            <block slot="content">商品</block>
+            <block slot="content">仓库管理</block>
         </cu-custom>
       <view class="cu-bar search bg-white">
         <view class="cu-item">
@@ -66,7 +66,7 @@
     import RadioModal from "@/components/common/radio_modal.vue";
     import CargoCard from "@/components/card/cargo_card.vue";
     @Component({
-        name: 'CarGo',
+        name: 'MingXi',
         components: {
           CargoCard,
           RadioModal,

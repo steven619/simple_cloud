@@ -19,6 +19,22 @@
       }
     },
     {
+      "path": "pages/dashboard/ruku",
+      "style": {}
+    },
+    {
+      "path": "pages/dashboard/chuku",
+      "style": {}
+    },
+    {
+      "path": "pages/dashboard/mingxi",
+      "style": {}
+    },
+    {
+      "path": "pages/dashboard/gengduo",
+      "style": {}
+    },
+    {
       "path": "pages/personal_center/user_info",
       "style": {
         "navigationBarTitleText": "个人信息"
