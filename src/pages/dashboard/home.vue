@@ -4,11 +4,19 @@
 			<view class="nav-list">
 				<navigator hover-class="none" :url="'/pages/dashboard/' + item.name" class="nav-li"  navigateTo :class="'bg-'+item.color"
 				 :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]" v-for="(item,index) in elements" :key="index" >
-<!--          @click="openPage"-->
+<!--          @="openPage"-->
 					<view class="nav-title">{{item.title}}</view>
 					<view class="nav-name">{{item.name}}</view>
 					<text :class="'cuIcon-' + item.cuIcon"></text>
 				</navigator>
+<!--        <view hover-class="none" class="nav-li"  navigateTo :class="'bg-'+item.color" :data-name="item.name"-->
+<!--              :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]" v-for="(item,index) in elements" :key="index" @tap="openPage">-->
+<!--          <view class="nav-title">{{item.title}}</view>-->
+<!--          <view class="nav-name">{{item.name}}</view>-->
+<!--          <text :class="'cuIcon-' + item.cuIcon"></text>-->
+<!--        </view>
+                                不加  navigator
+-->
 			</view>
 		</scroll-view>
 	</view>

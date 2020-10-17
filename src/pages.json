@@ -13,6 +13,14 @@
       }
     },
     {
+      "path": "pages/workshop/chukulist",
+      "style": {}
+    },
+    {
+      "path": "pages/workshop/rukulist",
+      "style": {}
+    },
+    {
       "path": "pages/dashboard/baobiao",
       "style": {
         "navigationBarTitleText": "首页"

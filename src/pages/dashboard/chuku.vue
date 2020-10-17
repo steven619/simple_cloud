@@ -195,9 +195,11 @@
           this.moreInfo = 'more'
           this.getTask()
         }
-        private addrukulist(){
-          console.log(9999,"添加成功")
-        }
+      private addrukulist(){
+        uni.navigateTo({
+          url: '/pages/workshop/chukulist'
+        });
+      }
 
 
         private pullDownRefresh() {

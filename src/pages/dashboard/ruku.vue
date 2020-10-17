@@ -162,6 +162,7 @@
 
 
 
+
       private showSelectModal:boolean = false
       private selectInfoTitle:string = ''
       private showInfo:any = {}
@@ -186,6 +187,7 @@
                     this.pullDownRefresh()
                 }
             })
+
         }
 
         private searchTask(){
@@ -193,8 +195,10 @@
           this.moreInfo = 'more'
           this.getTask()
         }
-        private addrukulist(){
-          console.log(9999,"添加成功")
+        private addrukulist(e:any){
+            uni.navigateTo({
+              url: '/pages/workshop/rukulist'
+            });
         }
 
 
