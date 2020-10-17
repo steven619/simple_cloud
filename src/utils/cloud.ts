@@ -35,6 +35,27 @@ export default class Cloud extends Base{
       params
     })
   }
+  public getRuku(params:any){
+    return http({
+      url: `${this.url}/schedule_management/ruku`,
+      method: 'get',
+      params
+    })
+  }
+  public getChuku(params:any){
+    return http({
+      url: `${this.url}/schedule_management/chuku`,
+      method: 'get',
+      params
+    })
+  }
+  public getMingxi(params:any){
+    return http({
+      url: `${this.url}/schedule_management/mingxi`,
+      method: 'get',
+      params
+    })
+  }
   public getVariable(params:any){
     return http({
       url: `${this.url}/schedule_management/variable`,

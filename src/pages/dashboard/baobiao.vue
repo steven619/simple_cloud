@@ -5,11 +5,14 @@
       <block slot="content">首页</block>
     </cu-custom>
 <!--    广告区-->
-    <swiper class="screen-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
-            :autoplay="true" interval="5000" duration="500">
-      <swiper-item v-for="(item,index) in swiperList" :key="index">
-        <image :src="item.url" mode="aspectFill" v-if="item.type=='image'"></image>
-        <video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
+    <swiper class="card-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
+            :autoplay="true" interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
+            indicator-active-color="#0081ff">
+      <swiper-item v-for="(item,index) in swiperList" :key="index" :class="cardCur==index?'cur':''">
+        <view class="swiper-item">
+          <image :src="item.url" mode="aspectFill" v-if="item.type=='image'"></image>
+          <video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
+        </view>
       </swiper-item>
     </swiper>
     <!--    xuexi-->
@@ -90,6 +93,7 @@
       url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
     }]
   }
+
 
 </script>
 

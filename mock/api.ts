@@ -24,6 +24,17 @@ export {
   deleteOperator as deleteCargo
 } from './schedule_management/cargo'
 export {
+  getOperatorList as getRukuList,
+  createOperator as createRuku,
+  updateOperator as updateRuku,
+  getOperator as getRuku,
+  deleteOperator as deleteRuku
+} from './schedule_management/ruku'
+
+
+
+
+export {
   getOperatorList as getMachineToolList,
   createOperator as createMachineTool,
   updateOperator as updateMachineTool,

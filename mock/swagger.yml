@@ -105,6 +105,87 @@ paths:
       operationId: deleteCargo
       tags:
         - 排产管理
+  /schedule_management/ruku:
+    get:
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/RukuOutputModelDataList'
+      summary: 获取列表
+      operationId: getRukuList
+
+      parameters:
+        - in: query
+          description: 时间区间
+          type: string
+          name: daterange
+        - in: query
+          description: 开始
+          type: integer
+          name: start
+        - in: query
+          description: 数量
+          type: integer
+          name: limit
+        - in: query
+          description: 关键字
+          type: string
+          name: keywords
+      tags:
+        - 排产管理
+    post:
+      summary:  添加单个信息
+      responses:
+        '200':
+          description: Success
+      operationId: createRuku
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/RukuModel'
+      tags:
+        - 排产管理
+  '/schedule_management/ruku/{id}':
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+    put:
+      summary: 修改单个信息
+      responses:
+        '200':
+          description: 直接返回201
+      operationId: updateRuku
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/RukuModel'
+      tags:
+        - 排产管理
+    get:
+      summary: 获取单个的信息
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/RukuOutputModel'
+      operationId: getRuku
+      tags:
+        - 排产管理
+    delete:
+      summary: 删除单个信息
+      responses:
+        '204':
+          description: Success
+      operationId: deleteRuku
+      tags:
+        - 排产管理
   # ------------------AdminUser--------------------
   /system/admin_user:
     get:
@@ -910,7 +991,65 @@ definitions:
       lingshoujia:
         type: integer
     type: object
-
+  RukuOutputModelDataList:
+    properties:
+      code:
+        type: integer
+        default: 200
+      message:
+        type: string
+        default: OK
+      count:
+        type: integer
+      start:
+        type: integer
+        default: 1
+      limit:
+        type: integer
+        default: 10
+      next:
+        type: string
+      previous:
+        type: string
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/RukuModel'
+      extra_data:
+        type: object
+    type: object
+  RukuOutputModel:
+    properties:
+      code:
+        type: integer
+      data:
+        $ref: '#/definitions/RukuModel'
+      message:
+        type: string
+    type: object
+  RukuModel:
+    properties:
+      id:
+        type: integer
+      img:
+        type: string
+      name:
+        type: string
+      xinghao:
+        type: string
+      shuliang:
+        type: integer
+      yewushijian:
+        type: string
+      danjubianhao:
+        type: integer
+      gongyinshang:
+        type: integer
+      cangku:
+        type: string
+      pingpai:
+        type: string
+    type: object
 
 
 

@@ -1,16 +1,14 @@
 <template>
     <view v-if="taskInfo">
       <view class="cu-list menu sm-border">
-        <view class="cu-card case" :class="isCard?'no-card':''">
           <view class="cu-item shadow">
             <view class="image">
 <!--              :src=taskInfo.img-->
-              <image src="https://img30.360buyimg.com/sku/jfs/t1/92539/20/17059/248918/5e81dab3Ebd9b8409/b2b655681dd9e633.jpg"
+              <image style="background-image:url(../../../../static/images/xuanze.png);"
                      mode="widthFix"></image>
               <view class="cu-tag bg-blue">充足</view>
             </view>
           </view>
-        </view>
           <view class="cu-bar bg-white solid-bottom margin-top-xs">
 
             <view class="action">
