@@ -16,34 +16,34 @@
       </swiper-item>
     </swiper>
     <!--    xuexi-->
-    <view class="flex padding bg-white">
-      <view class="flex-sub  padding-sm margin-xs radius">
-        <view class="flex flex-wrap">
-          <view class="cu-avatar lg margin-left" style="background-image:url(../../../../static/images/yaoyiyao.png);"></view>
-          <view class="solids-bottom  flex margin-right">
-            <view class="flex-sub text-center">
-              <view class="solid-bottom text-xl padding">
-                <text class="text-black text-bold">摇一摇！</text>
-              </view>
-              <view class="padding">遇到问题摇一摇</view>
-            </view>
-          </view>
-        </view>
-      </view>
-      <view class="flex-sub  padding-sm margin-xs radius">
-        <view class="flex flex-wrap">
-          <view class="cu-avatar lg margin-left" style="background-image:url(../../../../static/images/xuanze.png);"></view>
-          <view class="solids-bottom  flex align-center">
-            <view class="flex-sub text-center">
-              <view class="solid-bottom text-xl padding">
-                <text class="text-black text-bold">专属顾问！</text>
-              </view>
-              <view class="padding">您的专属顾问</view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
+<!--    <view class="flex padding bg-white">-->
+<!--      <view class="flex-sub  padding-sm margin-xs radius">-->
+<!--        <view class="flex flex-wrap">-->
+<!--          <view class="cu-avatar lg margin-left" style="background-image:url(../../../../static/images/yaoyiyao.png);"></view>-->
+<!--          <view class="solids-bottom  flex margin-right">-->
+<!--            <view class="flex-sub text-center">-->
+<!--              <view class="solid-bottom text-xl padding">-->
+<!--                <text class="text-black text-bold">摇一摇！</text>-->
+<!--              </view>-->
+<!--              <view class="padding">遇到问题摇一摇</view>-->
+<!--            </view>-->
+<!--          </view>-->
+<!--        </view>-->
+<!--      </view>-->
+<!--      <view class="flex-sub  padding-sm margin-xs radius">-->
+<!--        <view class="flex flex-wrap">-->
+<!--          <view class="cu-avatar lg margin-left" style="background-image:url(../../../../static/images/xuanze.png);"></view>-->
+<!--          <view class="solids-bottom  flex align-center">-->
+<!--            <view class="flex-sub text-center">-->
+<!--              <view class="solid-bottom text-xl padding">-->
+<!--                <text class="text-black text-bold">专属顾问！</text>-->
+<!--              </view>-->
+<!--              <view class="padding">您的专属顾问</view>-->
+<!--            </view>-->
+<!--          </view>-->
+<!--        </view>-->
+<!--      </view>-->
+<!--    </view>-->
   </view>
 </template>
 
@@ -63,6 +63,8 @@
   export default class extends Vue {
     private dotStyle: boolean = false
     private name: string = 'BaoBiao'
+    private cardCur:any = ''
+    private cardSwiper(){}
     private swiperList: any[] = [{
       id: 0,
       type: 'image',

@@ -103,11 +103,15 @@
     import { Component, Vue } from 'vue-property-decorator'
     import Cloud from '../../utils/cloud'
     import ChukuCard from "@/components/card/chuku_card.vue";
+    import UniLoadMore from "@/components/common/uni-load-more.vue";
+    import RadioModal from "@/components/common/radio_modal.vue";
 
     @Component({
         name: 'ChuKu',
         components: {
-          ChukuCard
+          ChukuCard,
+          UniLoadMore,
+          RadioModal
         }
     })
     export default class extends Vue {

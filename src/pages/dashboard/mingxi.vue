@@ -99,14 +99,16 @@
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator'
     import Cloud from '../../utils/cloud'
-    import ChukuCard from "@/components/card/chuku_card.vue";
     import MingxiCard from "@/components/card/mingxi_card.vue";
+    import RadioModal from "@/components/common/radio_modal.vue";
+    import UniLoadMore from "../../components/common/uni-load-more.vue";
 
     @Component({
         name: 'MingXi',
         components: {
           MingxiCard,
-          ChukuCard
+          UniLoadMore,
+          RadioModal
         }
     })
     export default class extends Vue {

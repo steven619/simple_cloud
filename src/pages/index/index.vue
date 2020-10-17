@@ -5,7 +5,6 @@
     <Home v-if="PageCur=='baobiao'"></Home>
     <car-go v-if="PageCur=='cargo'"></car-go>
     <personal-center v-if="PageCur=='personal-center'"></personal-center>
-
     <view class="cu-bar tabbar bg-white shadow foot">
       <view class="action"
             v-for="item in menuList"

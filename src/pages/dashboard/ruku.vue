@@ -101,11 +101,15 @@
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator'
     import Cloud from '../../utils/cloud'
+    import RadioModal from "@/components/common/radio_modal.vue";
+    import UniLoadMore from "../../components/common/uni-load-more.vue";
     import RukuCard from "@/components/card/ruku_card.vue";
     @Component({
         name: 'RuKu',
         components: {
-          RukuCard
+          RukuCard,
+          UniLoadMore,
+          RadioModal
         }
     })
     export default class extends Vue {
