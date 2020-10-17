@@ -1,14 +1,15 @@
 <template>
     <view v-if="taskInfo">
       <view class="cu-list menu sm-border">
+        <view class="cu-card case" >
           <view class="cu-item shadow">
             <view class="image">
-<!--              :src=taskInfo.img-->
-              <image style="background-image:url(../../../../static/images/xuanze.png);"
+              <image style="background-image:url(../../../../static/images/moren.jpg);"
                      mode="widthFix"></image>
               <view class="cu-tag bg-blue">充足</view>
             </view>
           </view>
+        </view>
           <view class="cu-bar bg-white solid-bottom margin-top-xs">
 
             <view class="action">

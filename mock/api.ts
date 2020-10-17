@@ -30,8 +30,20 @@ export {
   getOperator as getRuku,
   deleteOperator as deleteRuku
 } from './schedule_management/ruku'
-
-
+export {
+  getOperatorList as getChukuList,
+  createOperator as createChuku,
+  updateOperator as updateChuku,
+  getOperator as getChuku,
+  deleteOperator as deleteChuku
+} from './schedule_management/chuku'
+export {
+  getOperatorList as getMingxiList,
+  createOperator as createMingxi,
+  updateOperator as updateMingxi,
+  getOperator as getMingxi,
+  deleteOperator as deleteMingxi
+} from './schedule_management/mingxi'
 
 
 export {

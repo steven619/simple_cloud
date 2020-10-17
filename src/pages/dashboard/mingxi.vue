@@ -2,8 +2,9 @@
     <view>
         <cu-custom bgColor="bg-gradual-green" :isBack="true">
             <block slot="backText">返回</block>
-            <block slot="content">仓库管理</block>
+            <block slot="content">调拨明细</block>
         </cu-custom>
+
       <view class="cu-bar search bg-white">
         <view class="cu-item">
           <text class="lg text-gray cuIcon-scan margin-left-xs" style="font-size: 22px;"></text>
@@ -17,21 +18,58 @@
           <button @tap="searchTask" class="cu-btn line-green shadow-blur round">搜索</button>
         </view>
       </view>
-
-      <view class="cu-list grid col-3">
-        <view class="cu-item " v-for="(item,index) in cargoprince" :key="index">
-          <view class="lg text-black " :class="'cuIcon-' + item.name">{{item.value}}</view>
-          <view class="text-red">{{item.name}}</view>
+      <scroll-view scroll-x class="bg-white nav">
+        <view class="flex text-center">
+          <view class="cu-item flex-sub" :class="index==TabCur?'text-orange cur':''" v-for="(item,index) in 4" :key="index" @tap="barSelect" :data-id="index">
+            <view v-if="index==0">今日</view>
+            <view v-if="index==1">昨日</view>
+            <view v-if="index==2">近7天</view>
+            <view v-if="index==3">近30天</view>
+          </view>
+        </view>
+      </scroll-view>
+      <view v-for="(item,index) in 10" :key="index" v-if="index==TabCur" class="bg-white padding  text-center">
+        <view v-if="index==0">
+          <view class="cu-list grid col-4">
+            <view class="cu-item " v-for="(item,index) in cargoprince" :key="index">
+              <view class="ls text-black  " :class="'cuIcon-' + item.name">{{item.value}}</view>
+              <view class="text-red">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+        <view v-if="index==1">
+          <view class="cu-list grid col-4">
+            <view class="cu-item " v-for="(item,index) in cargoprince1" :key="index">
+              <view class="lg text-black " :class="'cuIcon-' + item.name">{{item.value}}</view>
+              <view class="text-red">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+        <view v-if="index==2">
+          <view class="cu-list grid col-4">
+            <view class="cu-item " v-for="(item,index) in cargoprince2" :key="index">
+              <view class="ls text-black " :class="'cuIcon-' + item.name">{{item.value}}</view>
+              <view class="text-red">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+        <view v-if="index==3">
+          <view class="cu-list grid col-4">
+            <view class="cu-item " v-for="(item,index) in cargoprince3" :key="index">
+              <view class="lg text-black " :class="'cuIcon-' + item.name">{{item.value}}</view>
+              <view class="text-red">{{item.name}}</view>
+            </view>
+          </view>
         </view>
       </view>
-
       <scroll-view scroll-y class="page">
-            <navigator v-for="(task,index) in taskList" :key="task.id" :url="`/pages/workshop/task_detail?taskId=${task.id}`">
-                <cargo-card :task-info="task" @showTaskInfo="showTaskInfo"></cargo-card>
+        <navigator v-for="(task,index) in taskList" :key="task.id" :url="`/pages/workshop/task_detail?taskId=${task.id}`">
+          <mingxi-card :task-info="task" @showTaskInfo="showTaskInfo"></mingxi-card>
 
-            </navigator>
-            <uni-load-more @tap="loadMore" :status="moreInfo" :contentText="loadMoreText" :loadingType="moreInfo"></uni-load-more>
-        </scroll-view>
+
+        </navigator>
+        <uni-load-more @tap="loadMore" :status="moreInfo" :contentText="loadMoreText" :loadingType="moreInfo"></uni-load-more>
+      </scroll-view>
 
         <view class="cu-load load-modal" v-if="loadModal">
             <view class="cuIcon-emojifill text-orange"></view>
@@ -60,28 +98,47 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator'
-    import { State, Getter, Action, Mutation, namespace } from 'vuex-class'
     import Cloud from '../../utils/cloud'
-    import UniLoadMore from "../../components/common/uni-load-more.vue";
-    import RadioModal from "@/components/common/radio_modal.vue";
-    import CargoCard from "@/components/card/cargo_card.vue";
+    import ChukuCard from "@/components/card/chuku_card.vue";
+    import MingxiCard from "@/components/card/mingxi_card.vue";
+
     @Component({
         name: 'MingXi',
         components: {
-          CargoCard,
-          RadioModal,
-          UniLoadMore
+          MingxiCard,
+          ChukuCard
         }
     })
     export default class extends Vue {
+      private  TabCur:number=0
+      private  scrollLeft:number=0
         private cloud = new Cloud()
         private taskList:any[] = []
       private cargoprince: any[] = [
-        {name: '110|700', value: '商品库存'},
-        {name: '$5,665,445', value: '库存成本'},
-        {name: '90', value: '库存预警'}
+        {name: '1', value: '单数'},
+        {name: '1', value: '商品数'},
+        {name: '130', value: '总数'},
+        {name: '170.36元', value: '总额'}
       ]
-        private tabCur:number = 0
+      private cargoprince1: any[] = [
+        {name: '1', value: '单数'},
+        {name: '1', value: '商品数'},
+        {name: '176', value: '总数'},
+        {name: '260.36元', value: '总额'}
+      ]
+      private cargoprince2: any[] = [
+        {name: '96', value: '单数'},
+        {name: '36', value: '商品数'},
+        {name: '860', value: '总数'},
+        {name: '1500.56元', value: '总额'}
+      ]
+      private cargoprince3: any[] = [
+        {name: '500', value: '单数'},
+        {name: '369', value: '商品数'},
+        {name: '4002', value: '总数'},
+        {name: '12500.56元', value: '总额'}
+      ]
+      private  tabCur:number=0
         private pullDownBool:boolean = false
         private loadModal:boolean = false
         private treeNodeId:number = 0
@@ -137,7 +194,6 @@
           this.moreInfo = 'more'
           this.getTask()
         }
-
         private pullDownRefresh() {
             this.query.keywords = ''
             this.getTask()
@@ -152,7 +208,7 @@
 
         private getTask(){
             this.loadModal = true
-            this.cloud.getCargo(this.query).then((res:any)=>{
+            this.cloud.getMingxi(this.query).then((res:any)=>{
               if(this.query.start === 0){
                 this.taskList = res.data
               }else {
@@ -175,13 +231,16 @@
             })
         }
 
-
         private tabSelect(e:any) {
             this.tabCur = e.currentTarget.dataset.id;
             this.query.start = 0
             this.moreInfo = 'more'
             this.query.state = e.currentTarget.dataset.id
             this.getTask()
+        }
+        private barSelect(e:any) {
+          this.TabCur = e.currentTarget.dataset.id;6
+          this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
         }
 
 

@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "path": "pages/dashboard/ruku",
+      "path": "pages/dashboard/mingxi",
       "style": {}
     },
     {
@@ -22,10 +22,10 @@
         "navigationBarTitleText": "首页"
       }
     },
-//    {
-//      "path": "pages/dashboard/ruku",
-//      "style": {}
-//    },
+    {
+      "path": "pages/dashboard/ruku",
+      "style": {}
+    },
     {
       "path": "pages/dashboard/chuku",
       "style": {}
@@ -54,26 +54,6 @@
       "path": "pages/login/login",
       "style": {
         "navigationBarTitleText": "登录"
-      }
-    },
-    {
-      "path": "pages/workshop/task_list",
-      "style": {
-        "navigationBarTitleText": "任务",
-        "enablePullDownRefresh": true
-      }
-    },
-    {
-      "path": "pages/workshop/device_list",
-      "style": {
-        "navigationBarTitleText": "机床",
-        "enablePullDownRefresh": true
-      }
-    },
-    {
-      "path": "pages/workshop/device_detail",
-      "style": {
-        "navigationBarTitleText": "机床详情"
       }
     }
     ],

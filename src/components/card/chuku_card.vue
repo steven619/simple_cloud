@@ -4,8 +4,8 @@
           <view class="cu-bar bg-white solid-bottom margin-top-xs action">
               <text class="cuIcon-titles text-green"></text> {{taskInfo.name}}
             <view class="action">
-              <view class="cu-capsule round cu-tag bg-green" >
-                  已入库
+              <view class="cu-capsule round cu-tag bg-red" >
+                  已出库
               </view>
             </view>
         </view>
@@ -39,7 +39,7 @@
     import { Component, Vue, Prop } from 'vue-property-decorator'
     import UploadImage from "@/components/card/upload-img.vue";
     @Component({
-        name: 'RukuCard',
+        name: 'ChukuCard',
         components: {
           UploadImage
         }

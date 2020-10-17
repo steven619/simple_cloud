@@ -186,6 +186,168 @@ paths:
       operationId: deleteRuku
       tags:
         - 排产管理
+  /schedule_management/chuku:
+    get:
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/ChukuOutputModelDataList'
+      summary: 获取列表
+      operationId: getChukuList
+
+      parameters:
+        - in: query
+          description: 时间区间
+          type: string
+          name: daterange
+        - in: query
+          description: 开始
+          type: integer
+          name: start
+        - in: query
+          description: 数量
+          type: integer
+          name: limit
+        - in: query
+          description: 关键字
+          type: string
+          name: keywords
+      tags:
+        - 排产管理
+    post:
+      summary: 添加单个信息
+      responses:
+        '200':
+          description: Success
+      operationId: createChuku
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/ChukuModel'
+      tags:
+        - 排产管理
+  '/schedule_management/chuku/{id}':
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+    put:
+      summary: 修改单个信息
+      responses:
+        '200':
+          description: 直接返回201
+      operationId: updateChuku
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/ChukuModel'
+      tags:
+        - 排产管理
+    get:
+      summary: 获取单个的信息
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/ChukuOutputModel'
+      operationId: getChuku
+      tags:
+        - 排产管理
+    delete:
+      summary: 删除单个信息
+      responses:
+        '204':
+          description: Success
+      operationId: deleteChuku
+      tags:
+        - 排产管理
+  /schedule_management/mingxi:
+    get:
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/MingxiOutputModelDataList'
+      summary: 获取列表
+      operationId: getMingxiList
+
+      parameters:
+        - in: query
+          description: 时间区间
+          type: string
+          name: daterange
+        - in: query
+          description: 开始
+          type: integer
+          name: start
+        - in: query
+          description: 数量
+          type: integer
+          name: limit
+        - in: query
+          description: 关键字
+          type: string
+          name: keywords
+      tags:
+        - 排产管理
+    post:
+      summary: 添加单个信息
+      responses:
+        '200':
+          description: Success
+      operationId: createMingxi
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/MingxiModel'
+      tags:
+        - 排产管理
+  '/schedule_management/mingxi/{id}':
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+    put:
+      summary: 修改单个信息
+      responses:
+        '200':
+          description: 直接返回201
+      operationId: updateMingxi
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/MingxiModel'
+      tags:
+        - 排产管理
+    get:
+      summary: 获取单个的信息
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/MingxiOutputModel'
+      operationId: getMingxi
+      tags:
+        - 排产管理
+    delete:
+      summary: 删除单个信息
+      responses:
+        '204':
+          description: Success
+      operationId: deleteMingxi
+      tags:
+        - 排产管理
   # ------------------AdminUser--------------------
   /system/admin_user:
     get:
@@ -1050,7 +1212,128 @@ definitions:
       pingpai:
         type: string
     type: object
-
+  ChukuOutputModelDataList:
+    properties:
+      code:
+        type: integer
+        default: 200
+      message:
+        type: string
+        default: OK
+      count:
+        type: integer
+      start:
+        type: integer
+        default: 1
+      limit:
+        type: integer
+        default: 10
+      next:
+        type: string
+      previous:
+        type: string
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/ChukuModel'
+      extra_data:
+        type: object
+    type: object
+  ChukuOutputModel:
+    properties:
+      code:
+        type: integer
+      data:
+        $ref: '#/definitions/ChukuModel'
+      message:
+        type: string
+    type: object
+  ChukuModel:
+    properties:
+      id:
+        type: integer
+      img:
+        type: string
+      name:
+        type: string
+      xinghao:
+        type: string
+      shuliang:
+        type: integer
+      yewushijian:
+        type: string
+      danjubianhao:
+        type: integer
+      gongyinshang:
+        type: string
+      cangku:
+        type: string
+      pingpai:
+        type: string
+    type: object
+  MingxiOutputModelDataList:
+    properties:
+      code:
+        type: integer
+        default: 200
+      message:
+        type: string
+        default: OK
+      count:
+        type: integer
+      start:
+        type: integer
+        default: 1
+      limit:
+        type: integer
+        default: 10
+      next:
+        type: string
+      previous:
+        type: string
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/MingxiModel'
+      extra_data:
+        type: object
+    type: object
+  MingxiOutputModel:
+    properties:
+      code:
+        type: integer
+      data:
+        $ref: '#/definitions/MingxiModel'
+      message:
+        type: string
+    type: object
+  MingxiModel:
+    properties:
+      id:
+        type: integer
+      img:
+        type: string
+      name:
+        type: string
+      xinghao:
+        type: string
+      shuliang:
+        type: integer
+      diaoboshijian:
+        type: string
+      danjubianhao:
+        type: integer
+      danjia:
+        type: integer
+      diaoboren:
+        type: string
+      jincangku:
+        type: string
+      chucangku:
+        type: string
+      pingpai:
+        type: string
+    type: object
 
 
 
