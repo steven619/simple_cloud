@@ -159,7 +159,7 @@
     }
     private getDashboard(){
       this.loadModal = true
-      this.cloud.getTreeNode(this.query).then((res:any)=>{
+      this.cloud.getTask(this.query).then((res:any)=>{
         // you code
         if(this.pullDownBool){
           this.pullDownBool = false

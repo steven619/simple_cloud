@@ -116,7 +116,7 @@
 
     public getTreeNodeList(){
       this.loadModal = true
-      this.cloud.getTreeNode(this.query).then((res:any)=>{
+      this.cloud.getTask(this.query).then((res:any)=>{
         if(this.query.start === 0){
           this.treeNodeList = res.data
         }else {

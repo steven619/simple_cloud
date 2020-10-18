@@ -49,12 +49,6 @@
       }
     },
     {
-      "path": "pages/workshop/workshop",
-      "style": {
-        "navigationBarTitleText": "机床"
-      }
-    },
-    {
       "path": "pages/login/login",
       "style": {
         "navigationBarTitleText": "登录"

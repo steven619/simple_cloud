@@ -7,20 +7,8 @@ export default class Cloud extends Base{
     super('/api/v1')
   }
 
-  public getTreeNode(params:any){
-    return http({
-      url: `${this.url}/organization/machine_tool`,
-      method: 'get',
-      params
-    })
-  }
-  public getDevice(params:any){
-    return http({
-      url: `${this.url}/project/project`,
-      method: 'get',
-      params
-    })
-  }
+
+
   public getTask(params:any){
     return http({
       url: `${this.url}/schedule_management/task`,

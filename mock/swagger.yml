@@ -12,8 +12,6 @@ info:
     url: 'https://www.woody.vip'
 
 tags:
-  - name: Organization
-    description: 组织管理
   - name: 排产管理
     description: 排产管理相关接口
   - name: User

@@ -25,7 +25,7 @@
                     <button @tap="searchDevice" class="cu-btn line-green shadow-blur round">搜索</button>
                 </view>
             </view>
-          
+
             <navigator v-for="(device,index) in deviceList" :key="device.id" :url="`/pages/workshop/device_detail?deviceId=${device.id}`">
                 <device-card :device-info="device"></device-card>
             </navigator>
@@ -119,10 +119,10 @@
           this.moreInfo = 'loading'
           this.getDevice()
         }
-        
+
         private getDevice(){
             this.loadModal = true
-            this.cloud.getDevice(this.query).then((res:any)=>{
+            this.cloud.getTask(this.query).then((res:any)=>{
               if(this.query.start === 0){
                 this.deviceList = res.data
               }else {
@@ -156,11 +156,11 @@
 
 
         public InputFocus(){
-  
+
         }
-  
+
         public InputBlur(){
-  
+
         }
 
 
