@@ -2,7 +2,7 @@
 	<view>
 
     <bao-biao v-if="PageCur=='baobiao'"></bao-biao>
-    <car-go v-if="PageCur=='cargo'"></car-go>
+    <home v-if="PageCur=='home'"></home>
     <personal-center v-if="PageCur=='personal-center'"></personal-center>
     <view class="cu-bar tabbar bg-white shadow foot">
       <view class="action"
@@ -26,12 +26,14 @@
   import Alert from "@/pages/alert/alert.vue";
   import PersonalCenter from "@/pages/personal_center/personal_center.vue";
 
-  import CarGo from "@/pages/workshop/cargo.vue";
+  import CarGo from "@/pages/dashboard/cargo.vue";
   import BaoBiao from "@/pages/dashboard/baobiao.vue";
+  import Home from "@/pages/dashboard/home.vue";
 
   @Component({
     name: 'MpIndex',
     components: {
+      Home,
       BaoBiao,
       CarGo,
       PersonalCenter,
@@ -45,7 +47,7 @@
     private PageCur = ''
     private menuList = [
       { name: 'baobiao', title:'首页'},
-      { name: 'cargo', title:'仓库'},
+      { name: 'home', title:'生意圈'},
       { name: 'personal-center', title:'我的'}
     ]
 

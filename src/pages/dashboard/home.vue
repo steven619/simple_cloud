@@ -27,7 +27,14 @@
     name: "Home",
     data() {
       return {
-        elements: [{
+        elements: [
+          {
+            title: '商品明细',
+            name: 'cargo',
+            color: 'orange',
+            cuIcon: 'formfill'
+          },
+            {
           title: '入库明细',
           name: 'ruku',
           color: 'blue',

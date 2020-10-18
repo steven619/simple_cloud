@@ -18,12 +18,24 @@
           </navigator>
         </view>
         <view class="cu-item arrow">
-          <button class="cu-btn content" open-type="feedback">
-            <text class="cuIcon-writefill text-cyan"></text>
-            <text class="text-grey">意见反馈</text>
-          </button>
+          <navigator class="content" url="/pages/dashboard/fankui" hover-class="none">
+            <text class="cuIcon-writefill text-blue"></text>
+            <text class="text-grey">反馈意见</text>
+          </navigator>
         </view>
-        <Home></Home>
+        <view class="cu-item arrow">
+          <navigator class="content" url="/pages/dashboard/fenxiang" hover-class="none">
+            <text class="cuIcon-redpacket text-blue"></text>
+            <text class="text-grey">邀请有礼</text>
+          </navigator>
+        </view>
+        <view class="cu-item arrow">
+          <navigator class="content" url="/pages/dashboard/daka" hover-class="none">
+            <text class="cuIcon-font text-blue"></text>
+            <text class="text-grey">在线打卡</text>
+          </navigator>
+        </view>
+
         <view class="padding-left padding-right flex flex-direction">
           <button class="cu-btn bg-red round margin-tb-sm xl" @click="logOutConfirm">退出登陆</button>
         </view>

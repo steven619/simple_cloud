@@ -7,7 +7,7 @@
       }
     },
     {
-      "path": "pages/workshop/cargo",
+      "path": "pages/dashboard/cargo",
       "style": {
         "navigationBarTitleText": "仓库管理"
       }
@@ -39,7 +39,19 @@
       "style": {}
     },
     {
+      "path": "pages/dashboard/fankui",
+      "style": {}
+    },
+    {
       "path": "pages/dashboard/chat",
+      "style": {}
+    },
+    {
+      "path": "pages/dashboard/fenxiang",
+      "style": {}
+    },
+    {
+      "path": "pages/dashboard/daka",
       "style": {}
     },
     {
