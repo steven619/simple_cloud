@@ -15,6 +15,10 @@ yarn install
 ```
 yarn serve
 ```
+### 模拟后台数据
+```
+yarn run mock
+```
 
 ### Compiles and minifies for production
 ```
@@ -54,4 +58,12 @@ http://127.0.0.1:5002/api/v1/driver/
     private driver = new Cloud()
     }
 </script>
+```
+## 参赛数据
+```
+一.APP介绍
+1.APP名称：仓储管理APP
+2.解决的工业场景：面向工业企业提供出库、入库、盘点，定位自动化、配置性强、策略丰富、管理立体的仓储管理APP。
+3.团队组成：宁夏大学软件工程学生（大四）（1人）
+4.
 ```
