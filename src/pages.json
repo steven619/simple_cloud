@@ -13,11 +13,15 @@
       }
     },
     {
-      "path": "pages/workshop/chukulist",
+      "path": "pages/workshop/chuku_list",
       "style": {}
     },
     {
-      "path": "pages/workshop/rukulist",
+      "path": "pages/workshop/ruku_list",
+      "style": {}
+    },
+    {
+      "path": "pages/workshop/cargo_list",
       "style": {}
     },
     {
@@ -32,6 +36,10 @@
     },
     {
       "path": "pages/dashboard/chuku",
+      "style": {}
+    },
+    {
+      "path": "pages/dashboard/chat",
       "style": {}
     },
     {

@@ -15,35 +15,61 @@
         </view>
       </swiper-item>
     </swiper>
-    <!--    xuexi-->
-<!--    <view class="flex padding bg-white">-->
-<!--      <view class="flex-sub  padding-sm margin-xs radius">-->
-<!--        <view class="flex flex-wrap">-->
-<!--          <view class="cu-avatar lg margin-left" style="background-image:url(../../../../static/images/yaoyiyao.png);"></view>-->
-<!--          <view class="solids-bottom  flex margin-right">-->
-<!--            <view class="flex-sub text-center">-->
-<!--              <view class="solid-bottom text-xl padding">-->
-<!--                <text class="text-black text-bold">摇一摇！</text>-->
-<!--              </view>-->
-<!--              <view class="padding">遇到问题摇一摇</view>-->
-<!--            </view>-->
-<!--          </view>-->
-<!--        </view>-->
-<!--      </view>-->
-<!--      <view class="flex-sub  padding-sm margin-xs radius">-->
-<!--        <view class="flex flex-wrap">-->
-<!--          <view class="cu-avatar lg margin-left" style="background-image:url(../../../../static/images/xuanze.png);"></view>-->
-<!--          <view class="solids-bottom  flex align-center">-->
-<!--            <view class="flex-sub text-center">-->
-<!--              <view class="solid-bottom text-xl padding">-->
-<!--                <text class="text-black text-bold">专属顾问！</text>-->
-<!--              </view>-->
-<!--              <view class="padding">您的专属顾问</view>-->
-<!--            </view>-->
-<!--          </view>-->
-<!--        </view>-->
-<!--      </view>-->
-<!--    </view>-->
+    <view class="cu-timeline">
+      <view class="cu-time">06-17</view>
+      <view class="cu-item">
+        <view class="content">
+          <text>01:30</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-timeline">
+      <view class="cu-time">06-17</view>
+      <view class="cu-item">
+        <view class="content">
+          <view class="cu-capsule radius">
+            <view class="cu-tag bg-cyan">上午</view>
+            <view class="cu-tag line-cyan">10:00</view>
+          </view>
+          <view class="margin-top">这是第一次，我家的铲屎官走了这么久。久到足足有三天！！ 在听到他的脚步声响在楼梯间的那一刻，我简直想要破门而出，对着他狠狠地吼上10分钟，然后再看心情要不要他进门。</view>
+        </view>
+      </view>
+      <view class="cu-item text-blue">
+        <view class="bg-blue shadow-blur content">
+          <view class="cu-list menu-avatar radius">
+            <view class="cu-item">
+              <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+              <view class="content">
+                <view class="text-grey">文晓港</view>
+                <view class="text-gray text-sm">
+                  <text class="cuIcon-infofill text-red"></text> 消息未送达</view>
+              </view>
+              <view class="action">
+                <view class="text-grey text-xs">22:20</view>
+                <view class="cu-tag round bg-grey sm">5</view>
+              </view>
+            </view>
+            <view class="cu-item">
+              <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);">
+                <view class="cu-tag badge">99+</view>
+              </view>
+              <view class="content">
+                <view class="text-grey">文晓港
+                  <view class="cu-tag round orange sm">SVIP</view>
+                </view>
+                <view class="text-gray text-sm">
+                  <text class="cuIcon-redpacket_fill text-red"></text> 收到红包</view>
+              </view>
+              <view class="action">
+                <view class="text-grey text-xs">22:20</view>
+                <text class="cuIcon-notice_forbid_fill text-gray"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>
 
@@ -62,39 +88,41 @@
   )
   export default class extends Vue {
     private dotStyle: boolean = false
-    private name: string = 'BaoBiao'
     private cardCur:any = ''
-    private cardSwiper(){}
     private swiperList: any[] = [{
       id: 0,
       type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
+      url: '/static/images/big84000.jpg'
     }, {
       id: 1,
       type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg',
+      url: '/static/images/big37006.jpg',
     }, {
       id: 2,
       type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
+      url: '/static/images/big39000.jpg'
     }, {
       id: 3,
       type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
+      url: '/static/images/big10001.jpg'
     }, {
       id: 4,
       type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
+      url: '/static/images/big25011.jpg'
     }, {
       id: 5,
       type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
+      url: '/static/images/big21016.jpg'
     }, {
       id: 6,
       type: 'image',
-      url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
+      url: '/static/images/big99008.jpg'
     }]
+    private cardSwiper(e:any) {
+      this.cardCur = e.detail.current
+    }
   }
+
 
 
 </script>

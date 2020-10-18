@@ -120,23 +120,23 @@
         private cloud = new Cloud()
         private taskList:any[] = []
       private cargoprince: any[] = [
-        {name: '1', value: '待入库单品数'},
-        {name: '36', value: '已入库单品数'},
+        {name: '1', value: '待出库单品数'},
+        {name: '36', value: '已出库单品数'},
         {name: '0', value: '欠货供应商数'}
       ]
       private cargoprince1: any[] = [
-        {name: '0', value: '待入库单品数'},
-        {name: '55', value: '已入库单品数'},
+        {name: '0', value: '待出库单品数'},
+        {name: '55', value: '已出库单品数'},
         {name: '2', value: '欠货供应商数'}
       ]
       private cargoprince2: any[] = [
-        {name: '5', value: '待入库单品数'},
-        {name: '560', value: '已入库单品数'},
+        {name: '5', value: '待出库单品数'},
+        {name: '560', value: '已出库单品数'},
         {name: '11', value: '欠货供应商数'}
       ]
       private cargoprince3: any[] = [
-        {name: '19', value: '待入库单品数'},
-        {name: '3600', value: '已入库单品数'},
+        {name: '19', value: '待出库单品数'},
+        {name: '3600', value: '已出库单品数'},
         {name: '56', value: '欠货供应商数'}
       ]
       private  tabCur:number=0
@@ -197,7 +197,7 @@
         }
       private addrukulist(){
         uni.navigateTo({
-          url: '/pages/workshop/chukulist'
+          url: '/pages/workshop/chuku_list'
         });
       }
 

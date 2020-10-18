@@ -2,7 +2,6 @@
 	<view>
 
     <bao-biao v-if="PageCur=='baobiao'"></bao-biao>
-    <Home v-if="PageCur=='baobiao'"></Home>
     <car-go v-if="PageCur=='cargo'"></car-go>
     <personal-center v-if="PageCur=='personal-center'"></personal-center>
     <view class="cu-bar tabbar bg-white shadow foot">
@@ -22,7 +21,6 @@
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
   import Cloud from '../../utils/cloud'
-  import Dashboard from '../dashboard/dashboard.vue'
   import Workshop from "@/pages/workshop/workshop.vue";
   import Analysis from "@/pages/analysis/analysis.vue";
   import Alert from "@/pages/alert/alert.vue";
@@ -30,19 +28,16 @@
 
   import CarGo from "@/pages/workshop/cargo.vue";
   import BaoBiao from "@/pages/dashboard/baobiao.vue";
-  import Home from "@/pages/dashboard/home.vue";
 
   @Component({
     name: 'MpIndex',
     components: {
-      Home,
       BaoBiao,
       CarGo,
       PersonalCenter,
       Alert,
       Analysis,
       Workshop,
-      Dashboard
     }
   })
   export default class extends Vue {

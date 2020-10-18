@@ -16,6 +16,9 @@
         <view class="action">
           <button @tap="searchTask" class="cu-btn line-green shadow-blur round">搜索</button>
         </view>
+        <view class="action">
+          <button @tap="addrukulist" class="cu-btn line-green shadow-blur round">添加</button>
+        </view>
       </view>
 
       <view class="cu-list grid col-3">
@@ -149,6 +152,11 @@
           this.moreInfo = 'loading'
           this.getTask()
         }
+      private addrukulist(e:any){
+        uni.navigateTo({
+          url: '/pages/workshop/cargo_list'
+        });
+      }
 
         private getTask(){
             this.loadModal = true

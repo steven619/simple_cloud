@@ -18,39 +18,15 @@
           </navigator>
         </view>
         <view class="cu-item arrow">
-          <navigator class="content" url="/pages/personal_center/change_phone" hover-class="none">
-            <text class="cuIcon-selection text-red"></text>
-            <text class="text-grey">生产记录</text>
-          </navigator>
+          <button class="cu-btn content" open-type="feedback">
+            <text class="cuIcon-writefill text-cyan"></text>
+            <text class="text-grey">意见反馈</text>
+          </button>
         </view>
-        <view class="cu-item arrow">
-          <navigator class="content" url="/pages/personal_center/change_phone" hover-class="none">
-            <text class="cuIcon-add text-yellow"></text>
-            <text class="text-grey">刀具更换管理</text>
-          </navigator>
+        <Home></Home>
+        <view class="padding-left padding-right flex flex-direction">
+          <button class="cu-btn bg-red round margin-tb-sm xl" @click="logOutConfirm">退出登陆</button>
         </view>
-        <view class="cu-item arrow">
-          <navigator class="content" url="/pages/personal_center/change_phone" hover-class="none">
-            <text class="cuIcon-baby text-purple"></text>
-            <text class="text-grey">松刀告警</text>
-          </navigator>
-        </view>
-        <view class="cu-item arrow">
-          <navigator class="content" url="/pages/personal_center/change_phone" hover-class="none">
-            <text class="cuIcon-calendar text-orange"></text>
-            <text class="text-grey">刀具更换管理</text>
-          </navigator>
-        </view>
-<!--        <view class="cu-item arrow">-->
-<!--          <button class="cu-btn content" open-type="feedback">-->
-<!--            <text class="cuIcon-writefill text-cyan"></text>-->
-<!--            <text class="text-grey">意见反馈</text>-->
-<!--          </button>-->
-<!--        </view>-->
-      </view>
-
-      <view class="padding-left padding-right flex flex-direction">
-        <button class="cu-btn bg-red round margin-tb-sm xl" @click="logOutConfirm">退出登陆</button>
       </view>
     </scroll-view>
     <view class="cu-tabbar-height"></view>
@@ -67,9 +43,11 @@
   import { State, Getter, Action, Mutation, namespace } from 'vuex-class'
   import Cloud from '../../utils/cloud'
   import service from "@/service";
+  import Home from "@/pages/dashboard/home.vue";
   @Component({
     name: 'PersonalCenter',
     components: {
+      Home
     }
   })
   export default class extends Vue {
@@ -77,7 +55,6 @@
     private userInfo:object = {avatar:''}
     private pullDownBool:boolean = false
     private modalName:string = ''
-
     mounted() {
       this.getUserInfo()
       uni.$on('mainRefresh',(data)=>{

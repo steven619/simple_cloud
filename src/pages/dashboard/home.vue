@@ -79,7 +79,4 @@
 </script>
 
 <style>
-	.page {
-		height: 100vh;
-	}
 </style>

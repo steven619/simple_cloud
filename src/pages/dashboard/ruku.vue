@@ -197,7 +197,7 @@
         }
         private addrukulist(e:any){
             uni.navigateTo({
-              url: '/pages/workshop/rukulist'
+              url: '/pages/workshop/ruku_list'
             });
         }
 

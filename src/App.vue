@@ -63,7 +63,6 @@
       border-radius: 12rpx;
       width: 45%;
       margin: 0 2.5% 40rpx;
-      background-image: url(https://cdn.nlark.com/yuque/0/2019/png/280374/1552996358352-assets/web-upload/cc3b1807-c684-4b83-8f80-80e5b8a6b975.png);
       background-size: cover;
       background-position: center;
       position: relative;
@@ -156,11 +155,11 @@
       0% {
         transform: translateY(-50px);
       }
-  
+
       60% {
         transform: translateY(40rpx);
       }
-  
+
       100% {
         transform: translateY(0px);
       }
@@ -170,11 +169,11 @@
       0% {
         transform: translateY(-50px);
       }
-  
+
       60% {
         transform: translateY(40rpx);
       }
-  
+
       100% {
         transform: translateY(0px);
       }
