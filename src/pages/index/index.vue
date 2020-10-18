@@ -45,7 +45,7 @@
     private PageCur = ''
     private menuList = [
       { name: 'baobiao', title:'首页'},
-      { name: 'cargo', title:'商品'},
+      { name: 'cargo', title:'仓库'},
       { name: 'personal-center', title:'我的'}
     ]
 
