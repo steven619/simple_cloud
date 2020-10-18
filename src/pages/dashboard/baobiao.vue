@@ -16,10 +16,10 @@
       </swiper-item>
     </swiper>
     <view class="cu-timeline">
-      <view class="cu-time">06-17</view>
+      <view class="cu-time">昨天</view>
       <view class="cu-item">
         <view class="content">
-          <text>01:30</text> 【喵星】 MX-12138 已揽收，准备发往银河系
+          <text>01:30</text> 【管理员杨旭】 MX-12138 已揽收，准备发往银河系仓库
         </view>
       </view>
     </view>
@@ -129,6 +129,6 @@
 
 <style scoped>
 .page {
-  height: 100vh;
+  height: 130vh;
 }
 </style>
