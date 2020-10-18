@@ -34,7 +34,7 @@
           </view>
         </view>
           <view class="cu-form-group margin-top">
-            <view class="title">普通选择</view>
+            <view class="title">意见种类</view>
             <picker @change="PickerChange" :value="index" :range="picker">
               <view class="picker">
                 {{index>-1?picker[index]:'您的意见范围'}}
