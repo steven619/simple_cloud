@@ -22,7 +22,7 @@
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
   import Cloud from '../../utils/cloud'
-  import Workshop from "@/pages/workshop/workshop.vue";
+
   import Analysis from "@/pages/analysis/analysis.vue";
   import Alert from "@/pages/alert/alert.vue";
   import PersonalCenter from "@/pages/personal_center/personal_center.vue";
@@ -42,7 +42,6 @@
       PersonalCenter,
       Alert,
       Analysis,
-      Workshop,
     }
   })
   export default class extends Vue {
