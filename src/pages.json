@@ -31,6 +31,10 @@
       "style": {}
     },
     {
+      "path": "pages/workshop/news_info",
+      "style": {}
+    },
+    {
       "path": "pages/dashboard/baobiao",
       "style": {
         "navigationBarTitleText": "首页"
@@ -81,7 +85,7 @@
       "allowsBounceVertical": "NO"
     },
     "navigationBarBackgroundColor": "#0081ff",
-    "navigationBarTitleText": "巫云工业物联网+",
+    "navigationBarTitleText": "仓储管理APP+",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
   },

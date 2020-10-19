@@ -12,8 +12,8 @@ info:
 
 
 tags:
-  - name: 排产管理
-    description: 排产管理相关接口
+  - name: 仓库管理
+    description: 仓库管理相关接口
   - name: User
     description: 用户相关
   - name: System
@@ -50,7 +50,7 @@ paths:
           type: string
           name: keywords
       tags:
-        - 排产管理
+        - 仓库管理
     post:
       summary:  添加单个信息
       responses:
@@ -64,7 +64,7 @@ paths:
           schema:
             $ref: '#/definitions/CargoModel'
       tags:
-        - 排产管理
+        - 仓库管理
   '/schedule_management/cargo/{id}':
     parameters:
       - name: id
@@ -84,7 +84,7 @@ paths:
           schema:
             $ref: '#/definitions/CargoModel'
       tags:
-        - 排产管理
+        - 仓库管理
     get:
       summary: 获取单个的信息
       responses:
@@ -94,7 +94,7 @@ paths:
             $ref: '#/definitions/CargoOutputModel'
       operationId: getCargo
       tags:
-        - 排产管理
+        - 仓库管理
     delete:
       summary: 删除单个信息
       responses:
@@ -102,7 +102,7 @@ paths:
           description: Success
       operationId: deleteCargo
       tags:
-        - 排产管理
+        - 仓库管理
   /schedule_management/ruku:
     get:
       responses:
@@ -131,7 +131,7 @@ paths:
           type: string
           name: keywords
       tags:
-        - 排产管理
+        - 仓库管理
     post:
       summary:  添加单个信息
       responses:
@@ -145,7 +145,7 @@ paths:
           schema:
             $ref: '#/definitions/RukuModel'
       tags:
-        - 排产管理
+        - 仓库管理
   '/schedule_management/ruku/{id}':
     parameters:
       - name: id
@@ -165,7 +165,7 @@ paths:
           schema:
             $ref: '#/definitions/RukuModel'
       tags:
-        - 排产管理
+        - 仓库管理
     get:
       summary: 获取单个的信息
       responses:
@@ -175,7 +175,7 @@ paths:
             $ref: '#/definitions/RukuOutputModel'
       operationId: getRuku
       tags:
-        - 排产管理
+        - 仓库管理
     delete:
       summary: 删除单个信息
       responses:
@@ -183,7 +183,7 @@ paths:
           description: Success
       operationId: deleteRuku
       tags:
-        - 排产管理
+        - 仓库管理
   /schedule_management/chuku:
     get:
       responses:
@@ -212,7 +212,7 @@ paths:
           type: string
           name: keywords
       tags:
-        - 排产管理
+        - 仓库管理
     post:
       summary: 添加单个信息
       responses:
@@ -226,7 +226,7 @@ paths:
           schema:
             $ref: '#/definitions/ChukuModel'
       tags:
-        - 排产管理
+        - 仓库管理
   '/schedule_management/chuku/{id}':
     parameters:
       - name: id
@@ -246,7 +246,7 @@ paths:
           schema:
             $ref: '#/definitions/ChukuModel'
       tags:
-        - 排产管理
+        - 仓库管理
     get:
       summary: 获取单个的信息
       responses:
@@ -256,7 +256,7 @@ paths:
             $ref: '#/definitions/ChukuOutputModel'
       operationId: getChuku
       tags:
-        - 排产管理
+        - 仓库管理
     delete:
       summary: 删除单个信息
       responses:
@@ -264,7 +264,7 @@ paths:
           description: Success
       operationId: deleteChuku
       tags:
-        - 排产管理
+        - 仓库管理
   /schedule_management/mingxi:
     get:
       responses:
@@ -293,7 +293,7 @@ paths:
           type: string
           name: keywords
       tags:
-        - 排产管理
+        - 仓库管理
     post:
       summary: 添加单个信息
       responses:
@@ -307,7 +307,7 @@ paths:
           schema:
             $ref: '#/definitions/MingxiModel'
       tags:
-        - 排产管理
+        - 仓库管理
   '/schedule_management/mingxi/{id}':
     parameters:
       - name: id
@@ -327,7 +327,7 @@ paths:
           schema:
             $ref: '#/definitions/MingxiModel'
       tags:
-        - 排产管理
+        - 仓库管理
     get:
       summary: 获取单个的信息
       responses:
@@ -337,7 +337,7 @@ paths:
             $ref: '#/definitions/MingxiOutputModel'
       operationId: getMingxi
       tags:
-        - 排产管理
+        - 仓库管理
     delete:
       summary: 删除单个信息
       responses:
@@ -345,7 +345,7 @@ paths:
           description: Success
       operationId: deleteMingxi
       tags:
-        - 排产管理
+        - 仓库管理
   # ------------------AdminUser--------------------
   /system/admin_user:
     get:
