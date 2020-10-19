@@ -12,7 +12,7 @@
         <view class="cu-card case" >
           <view class="cu-item shadow">
             <view class="image">
-              <image style="background-image:url(../../../../static/images/moren.jpg);"
+              <image style="background-image:url(../../../../static/images/x1.webp);"
                      mode="widthFix"></image>
               <view class="cu-tag bg-blue">合格</view>
             </view>
