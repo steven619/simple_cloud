@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<cu-custom bgColor="bg-gradual-pink" :isBack="true">
+    <cu-custom bgImage="/static/images/bar3.jpg" :isBack="true">
 			<block slot="backText">返回</block>
 			<block slot="content">商品信息</block>
 		</cu-custom>

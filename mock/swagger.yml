@@ -3,13 +3,13 @@ basePath: /api/v1
 host: "127.0.0.1:9528"
 
 info:
-  title: 加工中心生产监控管理系统
+  title: 仓储管理APP管理系统
   version: '1.0'
-  description: 巫迪工业
+  description: 杨旭
   contact:
-    name: 宁夏巫迪科技有限公司
-    email: passion@woody.vip
-    url: 'https://www.woody.vip'
+    name: 杨旭有限公司
+    email: yangxu85333467@gmail.com
+
 
 tags:
   - name: 排产管理

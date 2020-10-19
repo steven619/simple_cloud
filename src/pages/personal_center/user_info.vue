@@ -1,6 +1,6 @@
 <template>
   <view>
-    <cu-custom bgColor="bg-gradual-green" :isBack="true">
+    <cu-custom bgImage="/static/images/bar1.jpg" :isBack="true">
       <block slot="backText">返回</block>
       <block slot="content">个人信息</block>
     </cu-custom>
@@ -8,7 +8,7 @@
       <upload-image :url="userInfo.avatar"
                     @chooseImage="(e)=>{userInfo.avatar = e.url}"
                     @delImage="userInfo.avatar=''" title="头像"></upload-image>
-      
+
       <view class="cu-form-group margin-top">
         <view class="title">手机号</view>
         <input placeholder="手机号" class="text-right" name="input" v-model="userInfo.phone"></input>
@@ -46,7 +46,7 @@
   import General from '../../utils/general'
   import service from '@/service'
   import UploadImage from "@/components/card/upload-img.vue";
-  
+
 
   @Component({
     name: 'UserInfo',
@@ -104,14 +104,14 @@
 
     submitUserInfo(){
       this.hideModal()
-      
+
       this.general.commonRequest('/test/test2','get',
           {phone:this.userInfo.name}).then((res:any)=>{
 
         service.setToken(res.token)
         uni.navigateBack({delta: 2})
       })
-      
+
       // this.general.patchUserInfo(this.userInfo).then((res:any)=>{
       //   uni.showToast({
       //     icon: 'none',

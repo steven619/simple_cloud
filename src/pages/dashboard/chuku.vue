@@ -1,6 +1,6 @@
 <template>
     <view>
-        <cu-custom bgColor="bg-gradual-green" :isBack="true">
+        <cu-custom bgImage="/static/images/bar1.jpg" :isBack="true">
             <block slot="backText">返回</block>
             <block slot="content">出库明细</block>
         </cu-custom>

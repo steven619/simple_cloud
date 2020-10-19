@@ -1,6 +1,6 @@
 <template>
     <view>
-        <cu-custom bgColor="bg-gradual-green" :isBack="true">
+      <cu-custom bgImage="/static/images/bar2.jpg" :isBack="true">
             <block slot="backText">返回</block>
             <block slot="content">在线打卡</block>
         </cu-custom>

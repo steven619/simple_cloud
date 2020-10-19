@@ -1,6 +1,6 @@
 <template>
     <view>
-        <cu-custom bgColor="bg-gradual-pink" :isBack="true">
+      <cu-custom bgImage="/static/images/bar3.jpg" :isBack="true">
             <block slot="backText">返回</block>
             <block slot="content">登陆</block>
         </cu-custom>
@@ -34,7 +34,7 @@
                 <button @tap="bindLogin" :disabled="!/\d{11}/.test(phoneNum) || !/\d{6}/.test(password)" class="cu-btn bg-green margin-tb-sm lg">登陆</button>
             </view>
         </form>
-  
+
       <form v-if="loginType === 'username'">
         <view class="cu-form-group">
           <view class="title">用户名</view>
@@ -44,7 +44,7 @@
           <view class="title">密码</view>
           <input placeholder="输入密码" name="input" type="password" v-model="password"></input>
         </view>
-    
+
         <view class="padding flex flex-direction">
           <button @tap="usernameLogin" class="cu-btn bg-green margin-tb-sm lg">登陆</button>
         </view>
@@ -187,7 +187,7 @@
         //     uni.navigateBack();
         // }
       }
-	 
+
 
       getSmsCode(){
         uni.login({
@@ -206,7 +206,7 @@
           this.driver.smsCode({type: 'login',phone: this.phoneNum}).then((res:any)=>{
               uni.showToast({
                   icon: 'success',
-                  title: '发送成功' 
+                  title: '发送成功'
               });
           })
           this.count = 60

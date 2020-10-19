@@ -1,7 +1,6 @@
 <template>
   <view>
-    <cu-custom bgColor="bg-gradual-green" :isBack="true">
-      <block slot="backText">返回</block>
+   <cu-custom bgImage="/static/images/bar2.jpg" >
       <block slot="content">首页</block>
     </cu-custom>
 <!--    广告区-->
