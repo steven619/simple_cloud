@@ -18,6 +18,10 @@
         "navigationBarTitleText": "仓库管理"
       }
     },
+	{
+	  "path": "pages/dashboard/news",
+	  "style": {}
+	},
     {
       "path": "pages/workshop/chuku_list",
       "style": {}
