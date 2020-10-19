@@ -9,7 +9,7 @@
           <view class="solid-bottom text-xsl padding">
             <image src="/static/images/fankui.jpg" mode="widthFix" class="response"></image>
           </view>
-          <view class="padding text-black text-bold">一定要坚持打卡！！！</view>
+          <view class="padding text-black text-bold">感谢您的反馈！！！</view>
         </view>
       </view>
       <form>
