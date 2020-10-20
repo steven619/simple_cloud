@@ -1,6 +1,7 @@
 <template>
   <view>
-    <cu-custom bgImage="/static/images/bar2.jpg" >
+    <cu-custom bgImage="/static/images/bar2.jpg" :isBack="true" >
+      <block slot="backText">返回</block>
       <block slot="content">时时热点</block>
     </cu-custom>
 	<view class="content">

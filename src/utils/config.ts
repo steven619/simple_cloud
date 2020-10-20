@@ -1,5 +1,5 @@
-// const baseURL = 'https://ts-s.demo.woody.vip'
-const baseURL = ''
+const baseURL = 'http://127.0.0.1:9502'
+// const baseURL = ''
 const baseWsUrl = baseURL.replace('http','ws')
 const baseDict:any = {
   device_state: [
@@ -23,47 +23,6 @@ const baseDict:any = {
       {name: 'None', value:2},
       {name: 'Edit', value:3},
       {name: 'Handle', value:4},
-      {name: 'Jog', value:5},
-      {name: 'TeachinJog', value:6},
-      {name: 'TeachinHandle', value:7},
-      {name: 'Incfeed', value:8},
-      {name: 'Reference', value:9},
-      {name: 'Remote', value:10},
-      {name: 'Other', value:11},
-    ],
-    cnc_runstatus: [
-      {name: 'RESET', value:0},
-      {name: 'STOP', value:1},
-      {name: 'HOLD', value:2},
-      {name: 'START', value:3},
-      {name: 'MSTR', value:4},
-      {name: 'Other', value:5},
-    ],
-    cnc_emer: [
-      {name: '否', value:0},
-      {name: '是', value:1},
-      {name: 'Reset', value:2},
-      {name: 'Wait', value:3},
-      {name: 'Others', value:4},
-    ],
-    cnc_gcode: [
-      {name: 'G01', value:0},
-      {name: 'G02', value:1},
-      {name: 'G03', value:2},
-      {name: 'G04', value:3},
-      {name: 'Others', value:4},
-    ],
-  },
-  mitsubishi:{
-    cnc_mode:[
-      {name: 'JOG模式中', value:0},
-      {name: '手轮模式中', value:1},
-      {name: '增量模式中', value:2},
-      {name: '手动任意进给模式中', value:3},
-      {name: '参考点返回模式中', value:4},
-      {name: '自动初始设定模式中', value:5},
-      {name: 'JOG手轮同时模式中', value:6},
-      {name: 'Null1', value:7},
       {name: '内存模式中', value:8},
       {name: '纸带模式中', value:9},
       {name: '在线运行模式中', value:10},

@@ -65,6 +65,9 @@
         "nvueCompiler" : "uni-app",
         "uniStatistics" : {
             "enable" : false
+        },
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : false
         }
     },
     "quickapp" : {},
@@ -72,11 +75,11 @@
     "mp-weixin" : {
         /* 小程序特有相关 */
         "usingComponents" : true,
-        "appid" : "wx15f872db3077bad2",
+        "appid" : "wx567b18c5cb91aa6d",
         "setting" : {
-            "urlCheck" : true,
+            "urlCheck" : false,
             "minified" : true,
-            "postcss" : false,
+            "postcss" : true,
             "es6" : true
         },
         "uniStatistics" : {

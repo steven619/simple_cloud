@@ -71,7 +71,7 @@
             title: '商品明细',
             name: 'cargo',
             color: 'orange',
-            cuIcon: 'formfill'
+            cuIcon: 'goods'
           },
             {
           title: '入库明细',
@@ -83,7 +83,7 @@
             title: '出库明细',
             name: 'chuku',
             color: 'mauve',
-            cuIcon: 'formfill'
+            cuIcon: 'edit'
           },
           {
             title: '调拨明细',
@@ -98,10 +98,16 @@
             cuIcon: 'messagefill'
           },
           {
+            title: '实时热点',
+            name: 'news',
+            color: 'red',
+            cuIcon: 'hotfill'
+          },
+          {
             title: '更多功能',
             name: 'gengduo',
             color: 'red',
-            cuIcon: 'copy'
+            cuIcon: 'settings'
           }
         ],
       };
