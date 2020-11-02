@@ -1,4 +1,4 @@
-const baseURL = 'http://127.0.0.1:9502'
+const baseURL = 'https://app.yangxu.woody.vip'
 // const baseURL = ''
 const baseWsUrl = baseURL.replace('http','ws')
 const baseDict:any = {
