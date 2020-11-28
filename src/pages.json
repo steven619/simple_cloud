@@ -73,6 +73,10 @@
       "style": {}
     },
     {
+      "path": "pages/dashboard/buzu",
+      "style": {}
+    },
+    {
       "path": "pages/dashboard/gengduo",
       "style": {}
     },

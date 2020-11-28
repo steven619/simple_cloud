@@ -36,7 +36,13 @@ export {
   getOperator as getMingxi,
   deleteOperator as deleteMingxi
 } from './schedule_management/mingxi'
-
+export {
+  getOperatorList as getBuzuList,
+  createOperator as createBuzu,
+  updateOperator as updateBuzu,
+  getOperator as getBuzu,
+  deleteOperator as deleteBuzu
+} from './schedule_management/buzu'
 export {
   getOperatorList as getTaskList,
   createOperator as createTask,

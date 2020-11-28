@@ -73,6 +73,12 @@
             color: 'orange',
             cuIcon: 'goods'
           },
+          {
+            title: '低库存',
+            name: 'buzu',
+            color: 'orange',
+            cuIcon: 'goods'
+          },
             {
           title: '入库明细',
           name: 'ruku',

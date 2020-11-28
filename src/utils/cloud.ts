@@ -44,6 +44,13 @@ export default class Cloud extends Base{
       params
     })
   }
+  public getBuzu(params:any){
+    return http({
+      url: `${this.url}/schedule_management/buzu`,
+      method: 'get',
+      params
+    })
+  }
   public getVariable(params:any){
     return http({
       url: `${this.url}/schedule_management/variable`,

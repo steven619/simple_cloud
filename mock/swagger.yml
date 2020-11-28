@@ -346,6 +346,87 @@ paths:
       operationId: deleteMingxi
       tags:
         - 仓库管理
+  /schedule_management/Buzu:
+    get:
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/BuzuOutputModelDataList'
+      summary: 获取列表
+      operationId: getBuzuList
+
+      parameters:
+        - in: query
+          description: 时间区间
+          type: string
+          name: daterange
+        - in: query
+          description: 开始
+          type: integer
+          name: start
+        - in: query
+          description: 数量
+          type: integer
+          name: limit
+        - in: query
+          description: 关键字
+          type: string
+          name: keywords
+      tags:
+        - 仓库管理
+    post:
+      summary: 添加单个信息
+      responses:
+        '200':
+          description: Success
+      operationId: createBuzu
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/BuzuModel'
+      tags:
+        - 仓库管理
+  '/schedule_management/Buzu/{id}':
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+    put:
+      summary: 修改单个信息
+      responses:
+        '200':
+          description: 直接返回201
+      operationId: updateBuzu
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/BuzuModel'
+      tags:
+        - 仓库管理
+    get:
+      summary: 获取单个的信息
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/BuzuOutputModel'
+      operationId: getBuzu
+      tags:
+        - 仓库管理
+    delete:
+      summary: 删除单个信息
+      responses:
+        '204':
+          description: Success
+      operationId: deleteBuzu
+      tags:
+        - 仓库管理
   # ------------------AdminUser--------------------
   /system/admin_user:
     get:
@@ -1328,6 +1409,65 @@ definitions:
       jincangku:
         type: string
       chucangku:
+        type: string
+      pingpai:
+        type: string
+    type: object
+  BuzuOutputModelDataList:
+    properties:
+      code:
+        type: integer
+        default: 200
+      message:
+        type: string
+        default: OK
+      count:
+        type: integer
+      start:
+        type: integer
+        default: 1
+      limit:
+        type: integer
+        default: 10
+      next:
+        type: string
+      previous:
+        type: string
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/BuzuModel'
+      extra_data:
+        type: object
+    type: object
+  BuzuOutputModel:
+    properties:
+      code:
+        type: integer
+      data:
+        $ref: '#/definitions/BuzuModel'
+      message:
+        type: string
+    type: object
+  BuzuModel:
+    properties:
+      id:
+        type: integer
+      img:
+        type: string
+      name:
+        type: string
+      xinghao:
+        type: string
+      shuliang:
+        type: integer
+      diaoboshijian:
+        type: string
+      danjubianhao:
+        type: integer
+      danjia:
+        type: integer
+      diaoboren:
         type: string
       pingpai:
         type: string
